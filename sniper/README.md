@@ -9,16 +9,16 @@ Bu modül, klasik botların yaptığı gibi sürekli istek spam'lemek yerine; **
 1. **Atomik Saat Kalibrasyonu (NTP / Offset):**
    - Bilgisayarınızın saati ile İTÜ atomik saati arasındaki farkı milisaniyesine kadar ölçer (Örn: bilgisayarınız ~900 ms gerideyse, sistem bunu otomatik olarak hesaba katar).
 2. **T-30s Otomatik Yeniden Kalibrasyon:**
-   - Bilgisayarların anakartlarındaki kuvars kristali 10-15 dakikada 5-15 ms kayabilir. Bot, fırlatmaya 30 saniye kala (`T-30s`) otomatik taze bir kalibrasyon daha yaparak son saniyelerdeki kaymayı da sıfırlar.
+   - Bilgisayarların anakartlarındaki kuvars kristali 10-15 dakikada 5-15 ms kayabilir. Bot, seçime 30 saniye kala (`T-30s`) otomatik taze bir kalibrasyon daha yaparak son saniyelerdeki kaymayı da sıfırlar.
 3. **Sıcak Bağlantı (Connection Pre-warming):**
-   - Fırlatma öncesinde `obs.itu.edu.tr` ile TCP ve TLS 1.3 el sıkışmasını tamamlayarak soketi açık ve sıcak tutar.
-   - İlk soğuk bağlantı süresi **~172 ms** iken, ısıtılmış bağlantı fırlatma süresi **~3 ms** seviyesine iner (169 ms saf kazanç!).
+   - Seçim saati öncesinde `obs.itu.edu.tr` ile TCP ve TLS 1.3 el sıkışmasını tamamlayarak soketi açık ve sıcak tutar.
+   - İlk soğuk bağlantı süresi **~172 ms** iken, ısıtılmış bağlantı süresi **~3 ms** seviyesine iner (100ms'den fazla kazanç).
 4. **CPU Spin-Wait Zamanlayıcı:**
    - Standart `time.sleep()` işletim sistemi seviyesinde 10-15 ms dalgalanır. Sniper botu son 150 ms'ye kadar uyur, son 150 ms'de ise işlemciyi mikrosaniye hassasiyetli `spin-wait` döngüsüne alarak tam hedef anda paketi hatta basar.
 5. **Tek Ders ve Çoklu Ders (Batch) Desteği:**
    - İster tek bir ders, ister birden fazla ders tek bir HTTP isteğinde aynı anda sunucuya gönderilebilir.
 6. **Yedek CRN Yönetimi:**
-   - Asıl dersin kontenjanı doluysa (`VAL06`), 3.1 saniyelik güvenli bekleme süresinden sonra otomatik olarak tanımlı yedek CRN ateşlenir.
+   - Asıl dersin kontenjanı doluysa (`VAL06`), 3.1 saniyelik güvenli bekleme süresinden sonra otomatik olarak tanımlı yedek CRN istenir.
 7. **Ders Ekleme (ADD) ve Ders Bırakma (DROP) Desteği:**
    - Hem ders seçmek (`ECRN`) hem de ders bırakmak (`SCRN`) için kullanılabilir.
 8. **İTÜ Güvenlik Limitlerine Tam Uyum:**
