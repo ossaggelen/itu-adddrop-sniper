@@ -3,7 +3,8 @@
 > İTÜ Kepler (ÖBS) üzerinde milisaniye hassasiyetli, atomik saat senkronizasyonlu ve TCP/TLS el sıkışması önceden ısıtılmış tek atış (**Sniper Shot**) ders ekleme/bırakma otomasyonu.
 
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
-![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-lightgrey)
+![Tested OS](https://img.shields.io/badge/tested%20on-windows%2011-success)
+![Compatibility](https://img.shields.io/badge/compatible-linux%20%7C%20macos-informational)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
