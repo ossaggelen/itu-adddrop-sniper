@@ -1,0 +1,22 @@
+{
+  "account": {
+    "username": "ITU_KULLANICI_ADINIZ",
+    "password": "ITU_SIFRENIZ",
+    "manual_token": ""
+  },
+  "action": "add",
+  "target": {
+    "crn": "12476",
+    "crns": ["12476", "12477:12478"],
+    "backup_crn": "",
+    "arrival_buffer_ms": 15
+  },
+  "registration_time": {
+    "year": 2026,
+    "month": 10,
+    "day": 9,
+    "hour": 14,
+    "minute": 0,
+    "second": 0
+  }
+}

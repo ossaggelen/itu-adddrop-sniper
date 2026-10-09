@@ -1,0 +1,24 @@
+# Private user credentials & logs
+data/*
+!data/config.example.json
+logs/*
+sniper/config.json
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+{
+  "account": {
+    "username": "{ITU_KULLANICI_ADINIZ}",
+    "password": "{ITU_SIFRENIZ}"
+  },
+  "time": {
+    "year": 2026,
+    "month": 10,
+    "day": 9,
+    "hour": 14,
+    "minute": 0
+  },
+  "courses": {
+    "crn": [12476, "12477:12478"],
+    "scrn": []
+  }
+}
